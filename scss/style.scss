@@ -70,7 +70,16 @@ a {
 .text-section {
   display: flex;
   justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .col {
+    margin-right: 80px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
 }
 .page-footer {
   text-align: center;
+  padding-bottom: 50px;
 }
