@@ -27,14 +27,33 @@ a {
   text-decoration: none;
 }
 
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: url("../img/power.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
 .page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 20px;
 }
 
-.page-header img {
-  width: 130px;
+.page-header a {
+  color: #fff;
 }
 
 .nav ul li {
@@ -53,23 +72,13 @@ a {
 
 .nav ul li a:hover {
   background-color: #1a4788;
-  color: #fff;
 }
 
-.hero {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  background: url("../img/power.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.text-section {
+  display: flex;
+  justify-content: space-between;
 }
 
-.hero h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
+.page-footer {
+  text-align: center;
 }
