@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header img {
+  width: 130px;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.nav ul li:last-of-type {
+  margin-right: 0;
+}
+
+.nav ul li a {
+  padding: 10px;
+  transition: .5s;
+}
+
+.nav ul li a:hover {
+  background-color: #1a4788;
+  color: #fff;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: url("../img/power.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
