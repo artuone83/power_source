@@ -39,6 +39,11 @@ a {
   color: #fff;
 }
 
+.page-header img {
+  width: 150px;
+  height: 60px;
+}
+
 .nav li {
   display: inline-block;
   margin-right: 30px;
@@ -55,7 +60,7 @@ a {
 }
 
 .nav a:hover {
-  background-color: #1a4788;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .page-footer {
@@ -79,6 +84,10 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
+  font-size: 50px;
+  letter-spacing: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
 }
 
 .text-section {
