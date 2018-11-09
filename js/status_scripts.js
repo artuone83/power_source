@@ -28,8 +28,8 @@ function powerValue(item) {
   })
 
 }
-/* function checkPowerVal (valueFrom, object) {
-  if(valueFrom != 0) {
+/* function checkPowerVal (powerVal, object) {
+  if(powerVal != 0) {
     object.addClass('green-border');
     object.removeClass('gray-border');
     
