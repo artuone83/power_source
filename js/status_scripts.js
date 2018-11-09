@@ -1,5 +1,5 @@
-const falcon = $('.millennium-falcon');
-const lightSaber = $('.lightsaber');
+const falcon = $('.millennium-falcon img');
+const lightSaber = $('.lightsaber img');
 const falconPower = $('.falcon-power');
 const lightsaberPower = $('.lightsaber-power');
 const totalPower = $('.total-power-value');
@@ -9,14 +9,16 @@ let totalPowerVal;
 
 $(function(){
   getPowerVal();    
-  falcon.on('click', 'img', function(e){
+  falcon.click(function(e){
     $(this).toggleClass('green-border');
-    //powerValue(falconPower);
+    powerValue(falconPower);
+    $(this).toggleClass('yellow-bg');
 
   });
-  lightSaber.on('click', 'img', function(e){
+  lightSaber.click(function(e){
     $(this).toggleClass('green-border');
-    //powerValue(lightsaberPower);
+    powerValue(lightsaberPower);
+    $(this).toggleClass('yellow-bg');
   });
 });
 function powerValue(item) {
@@ -71,6 +73,6 @@ function getPowerVal(){
       return totalPowerVal;
     })
   });
-  }, 3000);
+  }, 5000);
 
 }
