@@ -28,11 +28,16 @@ a {
 }
 
 .page-header {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 0 20px;
 }
 
 .page-header a {
@@ -46,8 +51,6 @@ a {
 
 .nav li {
   display: inline-block;
-  margin-right: 30px;
-  padding: 10px;
 }
 
 .nav li:last-of-type {

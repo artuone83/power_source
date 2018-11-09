@@ -1,9 +1,14 @@
 .page-header {
+  background: rgba(0,0,0, .5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 0 20px;
   a {
     color: #fff;
     }
