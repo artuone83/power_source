@@ -6,3 +6,27 @@ $nav_link_bg: #1a4788;
 .page-header {
   background-color: #000;
 }
+.total-power {
+  h1 {
+    text-align: center;
+  }
+  .power-consumption {
+    display: flex;
+    .millennium-falcon {
+      width: 50%;
+      text-align: center;
+      cursor: pointer;
+    }
+    .lightsaber {
+      @extend .millennium-falcon;
+    }
+    img{
+      border-radius: 50%;
+      border: 1px solid gray;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      max-width: 100%;
+    }
+  }
+}

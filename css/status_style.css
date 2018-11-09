@@ -66,3 +66,26 @@ a {
 .page-header {
   background-color: #000;
 }
+
+.total-power h1 {
+  text-align: center;
+}
+
+.total-power .power-consumption {
+  display: flex;
+}
+
+.total-power .power-consumption .millennium-falcon, .total-power .power-consumption .lightsaber {
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.total-power .power-consumption img {
+  border-radius: 50%;
+  border: 1px solid gray;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  max-width: 100%;
+}
