@@ -3,49 +3,61 @@ $nav_link_bg: #1a4788;
 @import 'header';
 @import 'nav';
 @import 'footer';
-
-.page-header {
-  background-color: #000;
-}
 .total-power {
+  background: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;  
+  padding: 100px 0;
   h1 {
     text-align: center;
     font-size: 32px;
     letter-spacing: 3px;
+    margin: 25px 0;
+    color: #fff;
   }
   .power-consumption {
     display: flex;
   }
   .millennium-falcon {
     width: 50%;
-    text-align: center;
-    cursor: pointer;
+    text-align: center;    
     }
   .lightsaber {
     @extend .millennium-falcon;
     }
   img{
     border-radius: 50%;
-    border: 1px solid gray;
-    width: 300px;
-    height: 300px;
+    border: 5px solid rgba(155,155,155,.5);
+    width: 200px;
+    height: 200px;
     object-fit: scale-down;
     max-width: 100%;
+    cursor: pointer;
     }
     .green-border {
-      border: 2px solid green;
+      border: 5px solid rgba(0,128,0,.5);
     }
     .gray-border {
-      border: 2px solid gray;
+      border: 5px solid rgba(155,155,155,.5);
     }
     .yellow-bg {
-      background: yellow;
+      background: rgba(225,177,1,1);
+    }
+    .falcon-power {
+      color: #e1b101;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .lightsaber {
+      @extend .falcon-power;
+    }
+    .total-power-value {
+      @extend .falcon-power;
+      font-size: 32px;
     }
   
 }
-.total-power {
-  padding: 50px 0;
-  h1 {
-    margin: 25px 0;
-  }
-}
+  
+    
+

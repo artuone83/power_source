@@ -28,11 +28,16 @@ a {
 }
 
 .page-header {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 0 20px;
 }
 
 .page-header a {
@@ -46,8 +51,6 @@ a {
 
 .nav li {
   display: inline-block;
-  margin-right: 30px;
-  padding: 10px;
 }
 
 .nav li:last-of-type {
@@ -68,14 +71,20 @@ a {
   padding: 50px 0;
 }
 
-.page-header {
-  background-color: #000;
+.total-power {
+  background: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  padding: 100px 0;
 }
 
 .total-power h1 {
   text-align: center;
   font-size: 32px;
   letter-spacing: 3px;
+  margin: 25px 0;
+  color: #fff;
 }
 
 .total-power .power-consumption {
@@ -85,34 +94,36 @@ a {
 .total-power .millennium-falcon, .total-power .lightsaber {
   width: 50%;
   text-align: center;
-  cursor: pointer;
 }
 
 .total-power img {
   border-radius: 50%;
-  border: 1px solid gray;
-  width: 300px;
-  height: 300px;
+  border: 5px solid rgba(155, 155, 155, 0.5);
+  width: 200px;
+  height: 200px;
   object-fit: scale-down;
   max-width: 100%;
+  cursor: pointer;
 }
 
 .total-power .green-border {
-  border: 2px solid green;
+  border: 5px solid rgba(0, 128, 0, 0.5);
 }
 
 .total-power .gray-border {
-  border: 2px solid gray;
+  border: 5px solid rgba(155, 155, 155, 0.5);
 }
 
 .total-power .yellow-bg {
-  background: yellow;
+  background: #e1b101;
 }
 
-.total-power {
-  padding: 50px 0;
+.total-power .falcon-power, .total-power .lightsaber, .total-power .total-power-value {
+  color: #e1b101;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.total-power h1 {
-  margin: 25px 0;
+.total-power .total-power-value {
+  font-size: 32px;
 }
