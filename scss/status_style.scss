@@ -3,6 +3,7 @@ $nav_link_bg: #1a4788;
 @import 'header';
 @import 'nav';
 @import 'footer';
+
 .page-header {
   background-color: #000;
 }
@@ -27,6 +28,12 @@ $nav_link_bg: #1a4788;
       height: 300px;
       object-fit: cover;
       max-width: 100%;
+    }
+    .green-border {
+      border: 2px solid green;
+    }
+    .gray-border {
+      border: 2px solid gray;
     }
   }
 }

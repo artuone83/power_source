@@ -89,3 +89,11 @@ a {
   object-fit: cover;
   max-width: 100%;
 }
+
+.total-power .power-consumption .green-border {
+  border: 2px solid green;
+}
+
+.total-power .power-consumption .gray-border {
+  border: 2px solid gray;
+}
