@@ -63,7 +63,7 @@ function getPowerVal(){
       return `${saberPowerVal} kW`;
     });
     totalPower.html(function(){
-      return totalPowerVal;
+      return `${totalPowerVal} kW`;
     })
   });
   };
