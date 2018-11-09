@@ -13,21 +13,22 @@ $nav_link_bg: #1a4788;
   }
   .power-consumption {
     display: flex;
-    .millennium-falcon {
-      width: 50%;
-      text-align: center;
-      cursor: pointer;
+  }
+  .millennium-falcon {
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
     }
-    .lightsaber {
-      @extend .millennium-falcon;
+  .lightsaber {
+    @extend .millennium-falcon;
     }
-    img{
-      border-radius: 50%;
-      border: 1px solid gray;
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-      max-width: 100%;
+  img{
+    border-radius: 50%;
+    border: 1px solid gray;
+    width: 300px;
+    height: 300px;
+    object-fit: scale-down;
+    max-width: 100%;
     }
     .green-border {
       border: 2px solid green;
@@ -35,5 +36,14 @@ $nav_link_bg: #1a4788;
     .gray-border {
       border: 2px solid gray;
     }
+    .yellow-bg {
+      background: yellow;
+    }
+  
+}
+.total-power {
+  padding: 50px 0;
+  h1 {
+    margin: 25px 0;
   }
 }

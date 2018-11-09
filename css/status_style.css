@@ -60,7 +60,7 @@ a {
 
 .page-footer {
   text-align: center;
-  padding-bottom: 50px;
+  padding: 50px 0;
 }
 
 .page-header {
@@ -75,25 +75,37 @@ a {
   display: flex;
 }
 
-.total-power .power-consumption .millennium-falcon, .total-power .power-consumption .lightsaber {
+.total-power .millennium-falcon, .total-power .lightsaber {
   width: 50%;
   text-align: center;
   cursor: pointer;
 }
 
-.total-power .power-consumption img {
+.total-power img {
   border-radius: 50%;
   border: 1px solid gray;
   width: 300px;
   height: 300px;
-  object-fit: cover;
+  object-fit: scale-down;
   max-width: 100%;
 }
 
-.total-power .power-consumption .green-border {
+.total-power .green-border {
   border: 2px solid green;
 }
 
-.total-power .power-consumption .gray-border {
+.total-power .gray-border {
   border: 2px solid gray;
+}
+
+.total-power .yellow-bg {
+  background: yellow;
+}
+
+.total-power {
+  padding: 50px 0;
+}
+
+.total-power h1 {
+  margin: 25px 0;
 }
