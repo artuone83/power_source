@@ -6,13 +6,16 @@ const totalPower = $('.total-power-value');
 let falconPowerVal;
 let saberPowerVal;
 let totalPowerVal;
+let interVal = setInterval(getPowerVal,3000);
 
 $(function(){
-  getPowerVal();    
+  interVal;    
   falcon.click(function(e){
     $(this).toggleClass('green-border');
     powerValue(falconPower);
     $(this).toggleClass('yellow-bg');
+    stopFunction();
+    
 
   });
   lightSaber.click(function(e){
@@ -28,18 +31,8 @@ function powerValue(item) {
   })
 
 }
-/* function checkPowerVal (powerVal, object) {
-  if(powerVal != 0) {
-    object.addClass('green-border');
-    object.removeClass('gray-border');
-    
-  }else {
-    object.removeClass('green-border');
-    object.addClass('gray-border');
-  }
-} */
 function getPowerVal(){
-  setInterval( function(){
+  
     $.get("https://challenge.codetain.com/api/v1/charging_status", function(data, status){
     
     falconPowerVal = data.charging_status.falcon;
@@ -73,6 +66,8 @@ function getPowerVal(){
       return totalPowerVal;
     })
   });
-  }, 5000);
+  };
 
+  function stopFunction() {
+    clearInterval(interVal);
 }
