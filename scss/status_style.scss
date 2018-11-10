@@ -20,7 +20,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     width: 100%;
     @media all and (max-width: 960px) {
       top: 60%;
@@ -37,6 +38,8 @@
     }
   }
   .power-consumption {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;    
   }
   .millennium-falcon {
@@ -54,7 +57,8 @@
     border: 5px solid rgba(155,155,155,.5);
     width: 200px;
     height: 200px;
-    object-fit: scale-down;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
     max-width: 100%;
     cursor: pointer;
     @media all and (max-width: 960px){
