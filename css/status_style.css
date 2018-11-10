@@ -80,11 +80,12 @@ a {
   padding: 10px;
   transition: .5s;
   letter-spacing: 2px;
+  border-radius: 5px;
 }
 
 .nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .page-footer {

@@ -28,27 +28,30 @@ $nav_link_bg: #1a4788;
     font-size: 50px;
     letter-spacing: 5px;
     background-color: rgba(255, 255, 255, .2);
-    padding: 10px;
+    padding: 20px 10px;
+    width: 60%;
+    text-align: center;
+    border-radius: 20px;
     @media all and (max-width: 960px) {
 			width: 100%;
-			text-align: center;
+			border-radius: 0;
     }
   }
 }
 .text-section {
   display: flex;
-  justify-content: space-between;
-  padding-top: 50px;
-	padding-bottom: 50px;
+  justify-content: space-between;  
+	padding: 80px 50px;
 	@media all and (max-width: 960px) {
 		flex-direction: column;
+		padding: 25px;
 	}
   .col {
 		margin-right: 80px;
 		@media all and (max-width: 960px) {
-			margin-right: 20px;
+			margin-right: 0;
 			margin-bottom: 80px;
-			margin-left: 20px;
+			margin-left: 0;
 			&:last-of-type{
 				margin-bottom: 0;
 			}
@@ -56,5 +59,8 @@ $nav_link_bg: #1a4788;
     &:last-of-type {
       margin-right: 0;
     }
-  }
+	}
+	p {		
+		line-height: 25px;
+	}
 }
