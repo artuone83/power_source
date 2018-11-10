@@ -24,7 +24,10 @@ $(function(){
       return `${totalPowerVal} kW`;
     });
     $(this).toggleClass('yellow-bg');
-    apiURL = falconURL;
+    if(lightSaber.hasClass('yellow-bg')) {
+      lightSaber.removeClass('yellow-bg');
+      apiURL = falconURL;
+    }
   });
 
   lightSaber.click(function(e){
@@ -38,7 +41,10 @@ $(function(){
       return `${totalPowerVal} kW`;
     });
     $(this).toggleClass('yellow-bg');
-    apiURL = saberURL;
+    if(falcon.hasClass('yellow-bg')) {
+      falcon.removeClass('yellow-bg');
+      apiURL = saberURL;
+    }
   });
 });
 function getPowerVal(){
