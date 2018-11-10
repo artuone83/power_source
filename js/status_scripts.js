@@ -3,6 +3,9 @@ const lightSaber = $('.lightsaber img');
 const falconPower = $('.falcon-power');
 const lightsaberPower = $('.lightsaber-power');
 const totalPower = $('.total-power-value');
+let apiURL = 'https://challenge.codetain.com/api/v1/charging_status';
+let falconURL = 'https://challenge.codetain.com/api/v1/charging_status?priority=falcon';
+let saberURL = 'https://challenge.codetain.com/api/v1/charging_status?priority=lightsaber';
 let falconPowerVal = 0;
 let saberPowerVal = 0;
 let totalPowerVal;
@@ -10,7 +13,6 @@ let interVal = setInterval(getPowerVal, 10000);
 
 $(function(){
   interVal;
-
   falcon.click(function(e){
     $(this).toggleClass('green-border');
     falconPowerVal = Math.floor(Math.random() * 8); 
@@ -22,7 +24,7 @@ $(function(){
       return `${totalPowerVal} kW`;
     });
     $(this).toggleClass('yellow-bg');
-    stopFunction();
+    apiURL = falconURL;
   });
 
   lightSaber.click(function(e){
@@ -36,12 +38,13 @@ $(function(){
       return `${totalPowerVal} kW`;
     });
     $(this).toggleClass('yellow-bg');
+    apiURL = saberURL;
   });
 });
 function getPowerVal(){
   
-    $.get("https://challenge.codetain.com/api/v1/charging_status", function(data, status){
-    
+    $.get(apiURL, function(data, status){
+    console.log(data);
     falconPowerVal = data.charging_status.falcon;
     saberPowerVal = data.charging_status.lightsaber;
     totalPowerVal = falconPowerVal + saberPowerVal;
