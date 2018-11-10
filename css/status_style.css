@@ -38,13 +38,19 @@ a {
   left: 0;
   z-index: 1000;
   width: 100%;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .page-header > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media all and (max-width: 390px) {
+  .page-header > .container {
+    flex-direction: column;
+  }
 }
 
 .page-header a {
@@ -54,6 +60,12 @@ a {
 .page-header img {
   width: 150px;
   height: 60px;
+}
+
+@media all and (max-width: 390px) {
+  .nav {
+    margin: 20px 0;
+  }
 }
 
 .nav li {
@@ -87,7 +99,6 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-  padding: 100px 0;
   position: relative;
 }
 
@@ -108,12 +119,24 @@ a {
   width: 100%;
 }
 
+@media all and (max-width: 960px) {
+  .total-power > .container {
+    top: 60%;
+  }
+}
+
 .total-power h1 {
   text-align: center;
   font-size: 32px;
   letter-spacing: 3px;
   margin: 25px 0;
   color: #fff;
+}
+
+@media all and (max-width: 960px) {
+  .total-power h1 {
+    font-size: 25px;
+  }
 }
 
 .total-power .power-consumption {
@@ -125,6 +148,12 @@ a {
   text-align: center;
 }
 
+@media all and (max-width: 960px) {
+  .total-power .millennium-falcon, .total-power .lightsaber {
+    width: 100%;
+  }
+}
+
 .total-power img {
   border-radius: 50%;
   border: 5px solid rgba(155, 155, 155, 0.5);
@@ -133,6 +162,13 @@ a {
   object-fit: scale-down;
   max-width: 100%;
   cursor: pointer;
+}
+
+@media all and (max-width: 960px) {
+  .total-power img {
+    width: 125px;
+    height: 125px;
+  }
 }
 
 .total-power .green-border {

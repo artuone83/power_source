@@ -7,8 +7,7 @@ $nav_link_bg: #1a4788;
   background: url('../img/power2.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;  
-  padding: 100px 0;
+  height: 100vh;
   position: relative;
   &::before {
     content: '';
@@ -24,6 +23,9 @@ $nav_link_bg: #1a4788;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 100%;
+    @media all and (max-width: 960px) {
+      top: 60%;
+    }
   }
   h1 {
     text-align: center;
@@ -31,13 +33,19 @@ $nav_link_bg: #1a4788;
     letter-spacing: 3px;
     margin: 25px 0;
     color: #fff;
+    @media all and(max-width: 960px) {
+      font-size: 25px;
+    }
   }
   .power-consumption {
-    display: flex;
+    display: flex;    
   }
   .millennium-falcon {
     width: 50%;
-    text-align: center;    
+    text-align: center;
+    @media all and (max-width: 960px) {
+      width: 100%;
+    }
     }
   .lightsaber {
     @extend .millennium-falcon;
@@ -50,6 +58,10 @@ $nav_link_bg: #1a4788;
     object-fit: scale-down;
     max-width: 100%;
     cursor: pointer;
+    @media all and (max-width: 960px){
+      width: 125px;
+      height: 125px;
+    }
     }
     .green-border {
       border: 5px solid rgba(0,128,0,.5);

@@ -1,4 +1,7 @@
-.nav {  
+.nav {
+  @media all and (max-width: 390px) {
+    margin: 20px 0;
+  }  
   li{
     display: inline-block;    
     &:last-of-type {
