@@ -7,9 +7,11 @@
   }
   a {
     padding: 10px;            
-    transition: .5s;                 
+    transition: .5s; 
+    letter-spacing: 2px;                
     &:hover {
-      background-color: rgba(255, 255, 255, .2);        
+      background-color: rgba(255, 255, 255, .2);
+      font-weight: bold;        
     }    
   }
 }

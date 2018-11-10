@@ -11,6 +11,14 @@ $nav_link_bg: #1a4788;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  &::before {
+    content: '';
+    width: 100%;
+    background-color:  rgba(0, 0, 0, .5);;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
   h1 {
     position: absolute;
     top: 50%;
