@@ -83,7 +83,3 @@ function getPowerVal(){
     })
   });
   };
-
-  function stopFunction() {
-    clearInterval(interVal);
-}
