@@ -25,9 +25,9 @@ $(function(){
 		});
 		$(this).toggleClass('yellow-bg');
 		if(lightSaber.hasClass('yellow-bg')) {
-			lightSaber.removeClass('yellow-bg');
-			apiURL = falconURL;
+			lightSaber.removeClass('yellow-bg');			
 		}
+		apiURL = falconURL;
 	});
 
 	lightSaber.click(function(e){
@@ -42,9 +42,9 @@ $(function(){
 		});
 		$(this).toggleClass('yellow-bg');
 		if(falcon.hasClass('yellow-bg')) {
-			falcon.removeClass('yellow-bg');
-			apiURL = saberURL;
+			falcon.removeClass('yellow-bg');			
 		}
+		apiURL = saberURL;
 	});
 });
 function getPowerVal() {  
