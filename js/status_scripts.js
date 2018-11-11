@@ -9,8 +9,6 @@ let saberURL = 'https://challenge.codetain.com/api/v1/charging_status?priority=l
 let falconPowerVal = 0;
 let saberPowerVal = 0;
 let totalPowerVal;
-
-
 $(function(){
 	let interVal = setInterval(getPowerVal, 10000);
 	function setFalconPower() {
@@ -35,24 +33,21 @@ $(function(){
 			$.get(apiURL, function(data, status){          
 			falconPowerVal = data.charging_status.falcon;
 			saberPowerVal = data.charging_status.lightsaber;
-			totalPowerVal = falconPowerVal + saberPowerVal;
-			
+			totalPowerVal = falconPowerVal + saberPowerVal;			
 			if(falconPowerVal != 0) {
 				falcon.addClass('green-border');
 				falcon.removeClass('gray-border');      
 			}else {
 				falcon.removeClass('green-border');
 				falcon.addClass('gray-border');
-			}
-	
+			}	
 			if(saberPowerVal !=0) {
 				lightSaber.addClass('green-border');
 				lightSaber.removeClass('gray-border');
 			}else {
 				lightSaber.removeClass('green-border');
 				lightSaber.addClass('gray-border');
-			}
-	
+			}	
 			falconPower.html(function(){
 				return `${falconPowerVal} kW`;
 			});
@@ -66,25 +61,18 @@ $(function(){
 		};
 	falcon.click(function(e){
 		$(this).toggleClass('green-border');
-
 		setFalconPower();
-
 		calcTotalPower();
-
 		$(this).toggleClass('yellow-bg');
 		if(lightSaber.hasClass('yellow-bg')) {
 			lightSaber.removeClass('yellow-bg');			
 		}
 		apiURL = falconURL;
 	});
-
 	lightSaber.click(function(e){
-		$(this).toggleClass('green-border');
-		
+		$(this).toggleClass('green-border');		
 		setSaberPower();
-
 		calcTotalPower();
-
 		$(this).toggleClass('yellow-bg');
 		if(falcon.hasClass('yellow-bg')) {
 			falcon.removeClass('yellow-bg');			
