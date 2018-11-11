@@ -9,10 +9,10 @@ let saberURL = 'https://challenge.codetain.com/api/v1/charging_status?priority=l
 let falconPowerVal = 0;
 let saberPowerVal = 0;
 let totalPowerVal;
-let interVal = setInterval(getPowerVal, 10000);
+
 
 $(function(){
-	interVal;
+	let interVal = setInterval(getPowerVal, 10000);
 	falcon.click(function(e){
 		$(this).toggleClass('green-border');
 		falconPowerVal = Math.floor(Math.random() * 8); 
