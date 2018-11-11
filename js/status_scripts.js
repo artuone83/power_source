@@ -12,74 +12,71 @@ let totalPowerVal;
 let interVal = setInterval(getPowerVal, 10000);
 
 $(function(){
-  interVal;
-  falcon.click(function(e){
-    $(this).toggleClass('green-border');
-    falconPowerVal = Math.floor(Math.random() * 8); 
-    falconPower.html(function() {
-      return `${falconPowerVal} kW`;
-    });
-    totalPowerVal = falconPowerVal + saberPowerVal;
-    totalPower.html(function() {
-      return `${totalPowerVal} kW`;
-    });
-    $(this).toggleClass('yellow-bg');
-    if(lightSaber.hasClass('yellow-bg')) {
-      lightSaber.removeClass('yellow-bg');
-      apiURL = falconURL;
-    }
-  });
+	interVal;
+	falcon.click(function(e){
+		$(this).toggleClass('green-border');
+		falconPowerVal = Math.floor(Math.random() * 8); 
+		falconPower.html(function() {
+			return `${falconPowerVal} kW`;
+		});
+		totalPowerVal = falconPowerVal + saberPowerVal;
+		totalPower.html(function() {
+			return `${totalPowerVal} kW`;
+		});
+		$(this).toggleClass('yellow-bg');
+		if(lightSaber.hasClass('yellow-bg')) {
+			lightSaber.removeClass('yellow-bg');
+			apiURL = falconURL;
+		}
+	});
 
-  lightSaber.click(function(e){
-    $(this).toggleClass('green-border');
-    saberPowerVal = Math.floor(Math.random() * 8);
-    lightsaberPower.html(function() {
-      return `${saberPowerVal} kw`;
-    });
-    totalPowerVal = saberPowerVal + falconPowerVal;
-    totalPower.html(function() {
-      return `${totalPowerVal} kW`;
-    });
-    $(this).toggleClass('yellow-bg');
-    if(falcon.hasClass('yellow-bg')) {
-      falcon.removeClass('yellow-bg');
-      apiURL = saberURL;
-    }
-  });
+	lightSaber.click(function(e){
+		$(this).toggleClass('green-border');
+		saberPowerVal = Math.floor(Math.random() * 8);
+		lightsaberPower.html(function() {
+			return `${saberPowerVal} kw`;
+		});
+		totalPowerVal = saberPowerVal + falconPowerVal;
+		totalPower.html(function() {
+			return `${totalPowerVal} kW`;
+		});
+		$(this).toggleClass('yellow-bg');
+		if(falcon.hasClass('yellow-bg')) {
+			falcon.removeClass('yellow-bg');
+			apiURL = saberURL;
+		}
+	});
 });
-function getPowerVal(){
-  
-    $.get(apiURL, function(data, status){
-    console.log(data);
-    falconPowerVal = data.charging_status.falcon;
-    saberPowerVal = data.charging_status.lightsaber;
-    totalPowerVal = falconPowerVal + saberPowerVal;
-    
-    if(falconPowerVal != 0) {
-      falcon.addClass('green-border');
-      falcon.removeClass('gray-border');
-      
-    }else {
-      falcon.removeClass('green-border');
-      falcon.addClass('gray-border');
-    }
+function getPowerVal() {  
+		$.get(apiURL, function(data, status){          
+		falconPowerVal = data.charging_status.falcon;
+		saberPowerVal = data.charging_status.lightsaber;
+		totalPowerVal = falconPowerVal + saberPowerVal;
+		
+		if(falconPowerVal != 0) {
+			falcon.addClass('green-border');
+			falcon.removeClass('gray-border');      
+		}else {
+			falcon.removeClass('green-border');
+			falcon.addClass('gray-border');
+		}
 
-    if(saberPowerVal !=0) {
-      lightSaber.addClass('green-border');
-      lightSaber.removeClass('gray-border');
-    }else {
-      lightSaber.removeClass('green-border');
-      lightSaber.addClass('gray-border');
-    }
+		if(saberPowerVal !=0) {
+			lightSaber.addClass('green-border');
+			lightSaber.removeClass('gray-border');
+		}else {
+			lightSaber.removeClass('green-border');
+			lightSaber.addClass('gray-border');
+		}
 
-    falconPower.html(function(){
-      return `${falconPowerVal} kW`;
-    });
-    lightsaberPower.html(function(){
-      return `${saberPowerVal} kW`;
-    });
-    totalPower.html(function(){
-      return `${totalPowerVal} kW`;
-    })
-  });
-  };
+		falconPower.html(function(){
+			return `${falconPowerVal} kW`;
+		});
+		lightsaberPower.html(function(){
+			return `${saberPowerVal} kW`;
+		});
+		totalPower.html(function(){
+			return `${totalPowerVal} kW`;
+		})
+	});
+	};
